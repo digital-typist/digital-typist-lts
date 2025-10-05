@@ -7,7 +7,7 @@ export default function Footer() {
         <span> / </span>
         <a href="tel:+919924345007">+91 99243 45007</a>
         <br/>
-        <a href="mailto:digicomclass@gmail.com">📧 Email: digicomclass@gmail.com</a>
+        <a href="mailto:digitaltypistim@gmail.com">📧 Email: digicomclass@gmail.com</a>
       </div>
 
       <div className="copyright">

@@ -6,8 +6,8 @@ export default function ContactPage() {
 
       <p>
         Email:{" "}
-        <a href="mailto:digicomclass@gmail.com">
-          digicomclass@gmail.com
+        <a href="mailto:digitaltypistim@gmail.com">
+          digitaltypistim@gmail.com
         </a>
       </p>
 
