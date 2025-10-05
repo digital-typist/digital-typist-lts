@@ -25,7 +25,7 @@ export default function ContactForm() {
       `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\nUniversity: ${form.university}\n\nMessage:\n${form.message}`
     );
 
-    window.location.href = `mailto:digicomclass@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:digitaltypistim@gmail.com?subject=${subject}&body=${body}`;
   }
 
   return (
