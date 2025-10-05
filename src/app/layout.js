@@ -1,5 +1,6 @@
 import "./css/app.css";
 import "./globals.css";
+import "./css/home.css";
 import Header from "./js/Header";
 import Footer from "./js/Footer";
 
