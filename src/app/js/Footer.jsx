@@ -11,7 +11,7 @@ export default function Footer() {
       </div>
 
       <div className="copyright">
-        © {new Date().getFullYear()} Digital Typist. All rights reserved.
+        © Digital Typist. All rights reserved.
       </div>
     </footer>
   );
