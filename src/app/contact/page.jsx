@@ -12,12 +12,12 @@ export default function ContactPage() {
       </p>
 
       <p>
-        Call (Primary):{" "}
+        Call :{" "}
         <a href="tel:+918849165907">+91 88491 65907</a>
       </p>
 
       <p>
-        Call (Alternate):{" "}
+        
         <a href="tel:+919924345007">+91 99243 45007</a>
       </p>
     </section>
