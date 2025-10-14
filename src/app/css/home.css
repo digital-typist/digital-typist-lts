@@ -9,20 +9,16 @@
 }
 
 /* ===== HERO SECTION ===== */
-
 .hero {
     background: #f0e1ca;
-    /* slightly warmer and lighter than page bg */
     border-radius: 16px;
     padding: 70px 50px;
     margin-top: 40px;
     box-shadow: 0 8px 32px rgba(10, 37, 64, 0.08),
         0 2px 8px rgba(0, 0, 0, 0.04);
-    /* dual-layer soft shadow */
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-/* optional hover polish for interactivity */
 .hero:hover {
     box-shadow: 0 12px 40px rgba(10, 37, 64, 0.12),
         0 4px 12px rgba(0, 0, 0, 0.06);
@@ -104,7 +100,7 @@
     display: block;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE HERO ===== */
 @media (max-width: 900px) {
     .heroInner {
         flex-direction: column;
@@ -125,15 +121,13 @@
     }
 }
 
-
 /* ===== OUR SERVICES SECTION ===== */
 .services {
     background: #f9f4ee;
-    /* ultra-light warm cream */
     border-radius: 20px;
-    padding: 70px 60px 90px;
-    /* added left-right padding */
-    margin-top: 80px;
+    padding: 80px 80px 100px;
+    margin: 80px auto;
+    max-width: 1300px;
     box-shadow: 0 12px 36px rgba(10, 37, 64, 0.06),
         0 4px 12px rgba(0, 0, 0, 0.04);
     text-align: center;
@@ -154,7 +148,7 @@
     font-size: 1.9rem;
 }
 
-/* ensure equal spacing from edges */
+/* ===== GRID FOR SERVICE CARDS ===== */
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -162,68 +156,13 @@
     justify-items: center;
     align-items: stretch;
     width: 100%;
-    max-width: var(--max-width);
+    max-width: 1150px;
     margin: 0 auto;
 }
 
-/* responsive breakpoints */
-@media (max-width: 1200px) {
-    .grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 900px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    .services {
-        padding: 50px 24px 70px;
-        /* reduce padding for small screens */
-    }
-}
-
-/* responsive grid for cards */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* exactly 4 per row */
-    gap: 28px;
-    justify-items: center;
-    align-items: stretch;
-    padding: 0 10px;
-}
-
-/* responsive behavior */
-@media (max-width: 1200px) {
-    .grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 900px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* individual service cards */
+/* ===== SERVICE CARDS ===== */
 .card {
     background: #f0e1ca;
-    /* soft warm tone */
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(10, 37, 64, 0.08),
         0 2px 6px rgba(0, 0, 0, 0.04);
@@ -233,20 +172,17 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* hover polish */
 .card:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 24px rgba(10, 37, 64, 0.12),
         0 4px 10px rgba(0, 0, 0, 0.06);
 }
 
-/* card icon */
 .card .icon {
     font-size: 1.8rem;
     margin-bottom: 12px;
 }
 
-/* card heading */
 .card h3 {
     font-family: "Cormorant Garamond", serif;
     font-weight: 600;
@@ -255,7 +191,6 @@
     margin-bottom: 10px;
 }
 
-/* card paragraph */
 .card p {
     font-family: "Inter", sans-serif;
     font-size: 0.95rem;
@@ -263,7 +198,32 @@
     line-height: 1.6;
 }
 
-/* mobile adjustments */
+/* ===== RESPONSIVE GRID ===== */
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 950px;
+    }
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
+    .services {
+        padding: 60px 30px 80px;
+    }
+}
+
 @media (max-width: 768px) {
     .grid {
         gap: 20px;
@@ -273,11 +233,4 @@
         max-width: 100%;
         padding: 20px 16px;
     }
-}
-
-.services {
-    background: #f8f4ed;
-    border-radius: 16px;
-    padding: 60px 0;
-    box-shadow: 0 8px 32px rgba(10, 37, 64, 0.05);
 }
