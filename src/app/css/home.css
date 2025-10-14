@@ -143,11 +143,31 @@
 /* responsive grid for cards */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
+    /* exactly 4 per row */
     gap: 28px;
     justify-items: center;
     align-items: stretch;
     padding: 0 10px;
+}
+
+/* responsive behavior */
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* individual service cards */
