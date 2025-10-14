@@ -6,11 +6,11 @@ export default function Footer() {
       <div className="footerContact">
         <div>
           📞{" "}
-          <a href="tel:+919957155567" className="inline">
-            +31 99571 55567
+          <a href="tel:+918849165907" className="inline">
+            +918849165907
           </a>
-          <a href="tel:+519620456047" className="inline">
-            +51 96204 56047
+          <a href="tel:+919924345007" className="inline">
+             +919924345007
           </a>
         </div>
         <div>
