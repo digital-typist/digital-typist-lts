@@ -139,14 +139,14 @@ export default function HomePage() {
         <ContactForm />
       </section>
 
-      {/* WHATSAPP FLOATING BUTTON */}
+      {/* WHATSAPP FLOATING BUTTON
       <a
         href="https://wa.me/918849165907"
         className="whatsAppFloat"
         aria-label="Message on WhatsApp"
       >
         💬
-      </a>
+      </a> */}
     </section>
   );
 }
