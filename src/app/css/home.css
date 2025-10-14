@@ -533,3 +533,89 @@
         flex-direction: row;
     }
 }
+
+/* ===== TESTIMONIALS SECTION ===== */
+.testimonials {
+    background: #f9f4ee;
+    border-radius: 16px;
+    padding: 70px 50px;
+    margin: 80px auto;
+    max-width: 900px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(10, 37, 64, 0.05);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.testimonials:hover {
+    box-shadow: 0 10px 26px rgba(10, 37, 64, 0.08);
+    transform: translateY(-2px);
+}
+
+.testimonials h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    color: var(--brand);
+    margin-bottom: 40px;
+    font-size: 1.9rem;
+}
+
+/* quote container */
+.testi {
+    background: #f0e1ca;
+    border-radius: 12px;
+    padding: 28px 36px;
+    box-shadow: 0 4px 12px rgba(10, 37, 64, 0.08);
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testi:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(10, 37, 64, 0.12);
+}
+
+/* quote text */
+.testi p {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 14px;
+    quotes: "“" "”" "‘" "’";
+}
+
+.testi p::before {
+    content: open-quote;
+    color: var(--brand);
+    font-size: 1.3rem;
+    margin-right: 4px;
+}
+
+.testi p::after {
+    content: close-quote;
+    color: var(--brand);
+    font-size: 1.3rem;
+}
+
+/* author name */
+.testi footer {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1rem;
+    color: var(--brand);
+    font-weight: 600;
+    text-align: right;
+}
+
+/* responsive */
+@media (max-width: 700px) {
+    .testimonials {
+        padding: 50px 24px;
+        margin: 60px 16px;
+    }
+
+    .testi {
+        padding: 22px 24px;
+    }
+}
