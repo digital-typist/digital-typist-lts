@@ -6,29 +6,29 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="siteHeader">
-      <div className="container">
-        <div className="brand">
-          <h1>Digital Typist</h1>
+    <header className="mainHeader">
+      <div className="headerContainer">
+        <div className="brandBlock">
+          <h1 className="brandName">DIGITAL TYPIST</h1>
           <p className="tagline">Your Academic Partner for Thesis & Research</p>
         </div>
 
-        {/* ===== Hamburger Button (visible only on mobile) ===== */}
+        {/* ===== Hamburger for mobile ===== */}
         <button
           className="menuToggle"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle navigation menu"
+          aria-label="Toggle navigation"
         >
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
         </button>
 
-        {/* ===== Navigation Links ===== */}
-        <nav className={`siteNav ${menuOpen ? "open" : ""}`} aria-label="Main navigation">
-          <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
-          <Link href="/about" onClick={() => setMenuOpen(false)}>About</Link>
-          <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
+        {/* ===== Navigation ===== */}
+        <nav className={`navLinks ${menuOpen ? "open" : ""}`}>
+          <Link href="#services" onClick={() => setMenuOpen(false)}>Services</Link>
+          <Link href="#process" onClick={() => setMenuOpen(false)}>Process</Link>
+          <Link href="#reviews" onClick={() => setMenuOpen(false)}>Reviews</Link>
         </nav>
       </div>
     </header>
