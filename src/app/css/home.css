@@ -34,20 +34,20 @@
 }
 
 .heroText h1 {
-    font-family: "Playfair Display", serif;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
     font-size: 2.5rem;
-    font-weight: 700;
     color: var(--brand);
-    margin-bottom: 18px;
     line-height: 1.2;
+    margin-bottom: 18px;
 }
 
 .heroText .subtitle {
-    font-family: "Lato", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 1.05rem;
-    color: #333;
+    color: var(--text);
+    line-height: 1.7;
     margin-bottom: 28px;
-    line-height: 1.6;
 }
 
 .cta {
