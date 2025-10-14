@@ -80,9 +80,9 @@ export default function ContactForm() {
       </label>
 
       <div className="heroCta">
-        <button type="submit" className="btn">
+        {/* <button type="submit" className="btn">
           Send via Email
-        </button>
+        </button> */}
         <a
           className="btn secondary"
           href={`https://wa.me/918849165907?text=${encodeURIComponent(
