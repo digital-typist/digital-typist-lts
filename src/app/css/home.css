@@ -6,7 +6,7 @@
     background: var(--bg);
 }
 
-/* ===== HERO SECTION (Side-by-side layout like screenshot) ===== */
+/* ===== HERO SECTION FIX (side-by-side layout) ===== */
 .hero {
     background: var(--bg);
     padding: 60px 40px;
@@ -17,13 +17,15 @@
     align-items: center;
     justify-content: space-between;
     gap: 50px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    /* 👈 ensures baju-baju layout */
     max-width: var(--max-width);
     margin: 0 auto;
 }
 
 .heroText {
-    flex: 1 1 480px;
+    flex: 1 1 50%;
+    max-width: 540px;
 }
 
 .heroText h1 {
@@ -42,34 +44,52 @@
 }
 
 .cta {
-    margin-bottom: 12px;
-}
-
-.trust {
-    font-size: 0.95rem;
-    color: #444;
+    margin-bottom: 16px;
 }
 
 .heroImageWrapper {
-    flex: 1 1 420px;
+    flex: 1 1 50%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
 .heroImageBox {
     width: 100%;
-    max-width: 400px;
+    max-width: 420px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 6px 22px rgba(10, 61, 98, 0.08);
+    box-shadow: 0 6px 22px rgba(10, 61, 98, 0.1);
 }
 
 .heroImage {
     width: 100%;
     height: auto;
-    object-fit: cover;
     display: block;
+    object-fit: cover;
+}
+
+/* RESPONSIVE FIX — stack on small screens */
+@media (max-width: 900px) {
+    .heroInner {
+        flex-direction: column;
+        gap: 28px;
+        text-align: center;
+    }
+
+    .heroText,
+    .heroImageWrapper {
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+
+    .heroImageBox {
+        max-width: 90%;
+    }
+
+    .heroText h1 {
+        font-size: 2rem;
+    }
 }
 
 /* Responsive: stack layout on mobile */
