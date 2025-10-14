@@ -261,3 +261,21 @@
     height: 100%;
     object-fit: cover;
 }
+
+/* Responsive image container for hero section */
+.heroImage {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(10, 61, 98, 0.1);
+    overflow: hidden;
+}
+
+.heroImage img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    display: block;
+}
