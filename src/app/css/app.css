@@ -137,3 +137,25 @@
         padding-bottom: 70px;
     }
 }
+
+/* ===== Mobile Fixes ===== */
+@media (max-width: 768px) {
+    .siteHeader .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .siteNav {
+        margin-top: 10px;
+    }
+
+    .siteNav a {
+        display: inline-block;
+        margin: 4px 8px;
+    }
+
+    .siteFooter {
+        padding: 12px 8px;
+        font-size: 0.85rem;
+    }
+}

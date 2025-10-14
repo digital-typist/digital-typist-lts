@@ -1,4 +1,6 @@
-/* src/css/home.css */
+/* src/app/css/home.css */
+
+/* ===== Base Layout ===== */
 .homeContainer {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -53,7 +55,7 @@
     box-shadow: 0 6px 18px rgba(10, 61, 98, 0.1);
 }
 
-/* Services */
+/* ===== Services ===== */
 .services {
     margin-top: 40px;
 }
@@ -73,7 +75,7 @@
     box-shadow: 0 6px 18px rgba(10, 61, 98, 0.04);
 }
 
-/* How It Works */
+/* ===== How It Works ===== */
 .how {
     margin-top: 40px;
 }
@@ -95,7 +97,7 @@
     box-shadow: 0 6px 18px rgba(10, 61, 98, 0.04);
 }
 
-/* Why Choose */
+/* ===== Why Choose ===== */
 .why {
     margin-top: 40px;
 }
@@ -115,7 +117,7 @@
     box-shadow: 0 6px 18px rgba(10, 61, 98, 0.04);
 }
 
-/* Testimonials */
+/* ===== Testimonials ===== */
 .testimonials {
     margin-top: 40px;
 }
@@ -127,7 +129,7 @@
     box-shadow: 0 6px 18px rgba(10, 61, 98, 0.04);
 }
 
-/* Contact Form */
+/* ===== Contact Form ===== */
 .contact {
     margin-top: 40px;
 }
@@ -149,7 +151,7 @@
     border-radius: 6px;
 }
 
-/* Floating WhatsApp */
+/* ===== Floating WhatsApp ===== */
 .whatsAppFloat {
     position: fixed;
     right: 18px;
@@ -164,11 +166,61 @@
     border-radius: 50%;
     font-size: 1.5rem;
     box-shadow: 0 8px 28px rgba(10, 61, 98, 0.12);
+    z-index: 999;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
     .heroInner {
         flex-direction: column;
+        text-align: center;
+    }
+
+    .heroImage img {
+        max-width: 90%;
+    }
+
+    .cta {
+        justify-content: center;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .steps {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .usps {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 1.6rem;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+
+    .heroImage img {
+        max-width: 100%;
+    }
+
+    .siteFooter {
+        font-size: 0.85rem;
+    }
+
+    .homeContainer {
+        padding: 20px 10px 100px;
     }
 }
