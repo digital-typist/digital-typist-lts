@@ -146,12 +146,12 @@ export default function HomePage() {
       </section>
 
       {/* ===== TESTIMONIALS ===== */}
-      <section id="reviews" className="testimonials">
+      <section className="testimonials">
         <h2>What Clients Say</h2>
         <blockquote className="testi">
           <p>
-            “Perfect formatting for my PhD thesis — saved me valuable time
-            during submission.”
+            Perfect formatting for my PhD thesis — saved me valuable time during
+            submission.
           </p>
           <footer>— K. Patel, Gujarat University</footer>
         </blockquote>
