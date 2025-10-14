@@ -32,12 +32,12 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit}>
       <div className="formRow">
         <label>
-          Name
+          Name :
           <input name="name" value={form.name} onChange={handleChange} required />
         </label>
 
         <label>
-          Email
+          Email :
           <input
             type="email"
             name="email"
@@ -50,7 +50,7 @@ export default function ContactForm() {
 
       <div className="formRow">
         <label>
-          Phone
+          Phone :
           <input
             type="tel"
             name="phone"
@@ -60,7 +60,7 @@ export default function ContactForm() {
         </label>
 
         <label>
-          University
+          University :
           <input
             name="university"
             value={form.university}
@@ -70,7 +70,7 @@ export default function ContactForm() {
       </div>
 
       <label>
-        Message
+        Message :
         <textarea
           name="message"
           rows="4"
