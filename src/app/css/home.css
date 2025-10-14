@@ -168,10 +168,12 @@
 
 .contact form label {
     font-weight: 600;
-    margin-bottom: 4px;
-    /* tighter gap between label & input */
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    /* 👈 ensures clear spacing between label text & input */
     color: var(--brand);
+    font-size: 1rem;
 }
 
 .formRow {
