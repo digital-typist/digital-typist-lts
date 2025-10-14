@@ -385,3 +385,34 @@
     height: auto;
     display: block;
 }
+
+
+/* === Mobile spacing fix for hero and card section === */
+@media (max-width: 768px) {
+    .hero {
+        padding-bottom: 10px;
+        /* reduce white space below WhatsApp button */
+        margin-bottom: 0;
+        /* remove extra margin before card */
+    }
+
+    .heroText {
+        margin-bottom: 4px;
+        /* keep tiny gap between text & image */
+    }
+
+    .heroInner {
+        gap: 8px;
+        /* small controlled spacing */
+    }
+
+    .services {
+        margin-top: 10px !important;
+        /* reduce space above card section */
+    }
+
+    .heroImage {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+}
