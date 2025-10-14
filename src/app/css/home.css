@@ -268,6 +268,18 @@
     .heroInner {
         flex-direction: column;
         text-align: center;
+        gap: 0;
+    }
+    /* ensure hero section has balanced padding */
+    .hero {
+         padding-bottom: 20px;
+         /* reduce bottom space */
+    }
+    
+         /* fine-tune hero text area */
+    .heroText {
+        margin-bottom: 10px;
+        /* small controlled space before image */
     }
 
     .heroImage img {
