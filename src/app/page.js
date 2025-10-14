@@ -1,6 +1,6 @@
 // src/app/page.js
-import ContactForm from "./js/ContactForm";
 import Image from "next/image";
+import ContactForm from "./js/ContactForm";
 
 export const metadata = {
   title: "Digital Typist | Thesis Typing & Formatting Services India",
@@ -11,22 +11,21 @@ export const metadata = {
 export default function HomePage() {
   return (
     <section className="homeContainer">
-      {/* HERO SECTION */}
+      {/* ===== HERO SECTION ===== */}
       <header className="hero">
         <div className="heroInner">
+          {/* Left Side: Text Content */}
           <div className="heroText">
             <h1 className="title">
               Accurate Thesis Typing & Formatting for PhD Scholars
             </h1>
+
             <p className="subtitle">
               Fast · Confidential · University-compliant formatting in Sanskrit,
               Gujarati, Hindi & English.
             </p>
 
             <div className="cta">
-              {/* <a href="/contact" className="btn">
-                Get a Free Quote
-              </a> */}
               <a
                 href="https://wa.me/918849165907?text=Hello%20Digital%20Typist%2C%20I%20need%20help%20with%20my%20thesis"
                 target="_blank"
@@ -42,11 +41,14 @@ export default function HomePage() {
             </p>
           </div>
 
-         <div className="heroImageWrapper">
-           <div className="heroImageBox">
-             <Image
+          {/* Right Side: Hero Image */}
+          <div className="heroImageWrapper">
+            <div className="heroImageBox">
+              <Image
                 src="/card_front.jpg"
-                alt="Person formatting a thesis on laptop"
+                alt="Digital Typist promotional card"
+                width={420}
+                height={300}
                 className="heroImage"
               />
             </div>
@@ -54,15 +56,16 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* SERVICES SECTION */}
-      <section className="services">
+      {/* ===== SERVICES SECTION ===== */}
+      <section id="services" className="services">
         <h2>Our Services</h2>
         <div className="grid">
           <div className="card">
             <div className="icon">📝</div>
             <h3>Thesis Typing & Formatting</h3>
             <p>
-              UGC & University-compliant layout, TOC, margins, references — final Word & PDF delivery.
+              UGC & University-compliant layout, TOC, margins, references —
+              final Word & PDF delivery.
             </p>
           </div>
 
@@ -70,7 +73,8 @@ export default function HomePage() {
             <div className="icon">✍️</div>
             <h3>Proofreading & Editing</h3>
             <p>
-              Grammar, clarity, and citation style (APA / MLA / Vancouver) review.
+              Grammar, clarity, and citation style (APA / MLA / Vancouver)
+              review.
             </p>
           </div>
 
@@ -78,7 +82,8 @@ export default function HomePage() {
             <div className="icon">🌐</div>
             <h3>Multilingual Typing</h3>
             <p>
-              Sanskrit · Gujarati · Hindi · English — Unicode & transliteration support.
+              Sanskrit · Gujarati · Hindi · English — Unicode & transliteration
+              support.
             </p>
           </div>
 
@@ -92,8 +97,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* HOW IT WORKS SECTION */}
-      <section className="how">
+      {/* ===== HOW IT WORKS SECTION ===== */}
+      <section id="process" className="how">
         <h2>How It Works</h2>
         <ol className="steps">
           <li>
@@ -111,7 +116,7 @@ export default function HomePage() {
         </ol>
       </section>
 
-      {/* WHY CHOOSE US SECTION */}
+      {/* ===== WHY CHOOSE US SECTION ===== */}
       <section className="why">
         <h2>Why Choose Digital Typist</h2>
         <ul className="usps">
@@ -122,31 +127,23 @@ export default function HomePage() {
         </ul>
       </section>
 
-      {/* TESTIMONIALS */}
-      <section className="testimonials">
+      {/* ===== TESTIMONIALS SECTION ===== */}
+      <section id="reviews" className="testimonials">
         <h2>What Clients Say</h2>
         <blockquote className="testi">
           <p>
-            “Perfect formatting for my PhD thesis — saved me valuable time during submission.”
+            “Perfect formatting for my PhD thesis — saved me valuable time
+            during submission.”
           </p>
           <footer>— K. Patel, Gujarat University</footer>
         </blockquote>
       </section>
 
-      {/* CONTACT FORM */}
+      {/* ===== CONTACT FORM SECTION ===== */}
       <section className="contact">
         <h2>Get a Quote</h2>
         <ContactForm />
       </section>
-
-      {/* WHATSAPP FLOATING BUTTON
-      <a
-        href="https://wa.me/918849165907"
-        className="whatsAppFloat"
-        aria-label="Message on WhatsApp"
-      >
-        💬
-      </a> */}
     </section>
   );
 }
