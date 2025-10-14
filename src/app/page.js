@@ -21,8 +21,8 @@ export default function HomePage() {
             </h1>
 
             <p className="subtitle">
-              Fast · Confidential · University-compliant formatting in Sanskrit,
-              Gujarati, Hindi & English.
+              Expert thesis support in Sanskrit, Hindi, Gujarati & English –
+              formatted to UGC standards, delivered with precision and care.
             </p>
 
             <div className="cta">
@@ -35,10 +35,6 @@ export default function HomePage() {
                 Message on WhatsApp
               </a>
             </div>
-
-            <p className="trust">
-              Trusted by PhD & M.Phil scholars — Confidential, on-time delivery.
-            </p>
           </div>
 
           {/* Right Side: Hero Image */}
@@ -97,7 +93,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== HOW IT WORKS SECTION ===== */}
+      {/* ===== HOW IT WORKS ===== */}
       <section id="process" className="how">
         <h2>How It Works</h2>
         <ol className="steps">
@@ -116,7 +112,7 @@ export default function HomePage() {
         </ol>
       </section>
 
-      {/* ===== WHY CHOOSE US SECTION ===== */}
+      {/* ===== WHY CHOOSE US ===== */}
       <section className="why">
         <h2>Why Choose Digital Typist</h2>
         <ul className="usps">
@@ -127,7 +123,7 @@ export default function HomePage() {
         </ul>
       </section>
 
-      {/* ===== TESTIMONIALS SECTION ===== */}
+      {/* ===== TESTIMONIALS ===== */}
       <section id="reviews" className="testimonials">
         <h2>What Clients Say</h2>
         <blockquote className="testi">
@@ -139,7 +135,7 @@ export default function HomePage() {
         </blockquote>
       </section>
 
-      {/* ===== CONTACT FORM SECTION ===== */}
+      {/* ===== CONTACT FORM ===== */}
       <section className="contact">
         <h2>Get a Quote</h2>
         <ContactForm />
