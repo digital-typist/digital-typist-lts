@@ -13,10 +13,12 @@ export default function ContactForm() {
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    // only allow digits in phone and limit to 10
     if (name === "phone") {
-      if (!/^\d*$/.test(value)) return; // block non-numeric
-      if (value.length > 10) return; // block beyond 10 digits
+      // strip everything except digits
+      const digitsOnly = value.replace(/\D/g, "");
+      if (digitsOnly.length > 10) return;
+      setForm({ ...form, [name]: digitsOnly });
+      return;
     }
 
     setForm({ ...form, [name]: value });
@@ -25,13 +27,14 @@ export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // simple email format check
+    // validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(form.email)) {
       alert("Please enter a valid email address.");
       return;
     }
 
+    // validate 10-digit phone number
     if (form.phone.length !== 10) {
       alert("Please enter a valid 10-digit phone number.");
       return;
@@ -68,15 +71,15 @@ export default function ContactForm() {
         onChange={handleChange}
       />
       <input
-        type="text"
+        type="tel"
         name="phone"
         placeholder="Phone (10 digits)"
         value={form.phone}
         onChange={handleChange}
         required
-        inputMode="numeric"
-        pattern="\d{10}"
         maxLength="10"
+        pattern="\d{10}"
+        inputMode="numeric"
         title="Enter a valid 10-digit phone number"
       />
       <textarea
