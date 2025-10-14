@@ -9,13 +9,24 @@
 }
 
 /* ===== HERO SECTION ===== */
+/* ===== HERO SECTION (with soft elevation) ===== */
 .hero {
-    background: #f5efe7;
-    /* warmer cream */
-    border-radius: 12px;
-    box-shadow: 0 6px 26px rgba(0, 0, 0, 0.05);
+    background: #f8f4ed;
+    /* slightly warmer and lighter than page bg */
+    border-radius: 16px;
     padding: 70px 50px;
-    margin-top: 30px;
+    margin-top: 40px;
+    box-shadow: 0 8px 32px rgba(10, 37, 64, 0.08),
+        0 2px 8px rgba(0, 0, 0, 0.04);
+    /* dual-layer soft shadow */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* optional hover polish for interactivity */
+.hero:hover {
+    box-shadow: 0 12px 40px rgba(10, 37, 64, 0.12),
+        0 4px 12px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
 }
 
 .heroInner {
@@ -24,6 +35,8 @@
     justify-content: space-between;
     gap: 60px;
     flex-wrap: nowrap;
+    max-width: var(--max-width);
+    margin: 0 auto;
 }
 
 .heroText {
