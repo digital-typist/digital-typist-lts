@@ -44,7 +44,7 @@ export default function HomePage() {
          <div className="heroImageWrapper">
            <div className="heroImageBox">
              <image
-                src="/card.jpg"
+                src="/public/card.jpg"
                 alt="Person formatting a thesis on laptop"
                 className="heroImage"
               />
