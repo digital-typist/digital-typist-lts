@@ -22,10 +22,10 @@ export default function HomePage() {
               Gujarati, Hindi & English.
             </p>
 
-            {/* <div className="cta">
-              <a href="/contact" className="btn">
+            <div className="cta">
+              {/* <a href="/contact" className="btn">
                 Get a Free Quote
-              </a>
+              </a> */}
               <a
                 href="https://wa.me/918849165907?text=Hello%20Digital%20Typist%2C%20I%20need%20help%20with%20my%20thesis"
                 target="_blank"
@@ -34,7 +34,7 @@ export default function HomePage() {
               >
                 Message on WhatsApp
               </a>
-            </div> */}
+            </div>
 
             <p className="trust">
               Trusted by PhD & M.Phil scholars — Confidential, on-time delivery.
