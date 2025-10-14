@@ -37,16 +37,35 @@
     margin-bottom: 16px;
 }
 
+/* Fix button alignment & spacing */
 .cta {
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    /* centers buttons horizontally */
+    align-items: center;
+    /* centers vertically if wrapped */
+    gap: 14px;
+    /* a little more breathing room between buttons */
+    margin-top: 20px;
+    /* space above buttons */
+    margin-bottom: 20px;
+    /* space below buttons */
     flex-wrap: wrap;
 }
 
+.cta .btn {
+    min-width: 180px;
+    /* makes both buttons equal width */
+    text-align: center;
+}
+
+/* Add proper spacing for trust line */
 .trust {
-    margin-top: 8px;
-    color: #666;
+    margin-top: 10px;
+    text-align: center;
+    color: #555;
     font-size: 0.95rem;
+    line-height: 1.4;
 }
 
 .heroImage img {
