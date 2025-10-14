@@ -238,3 +238,17 @@
         display: none;
     } */
 }
+
+@media (max-width: 768px) {
+    .brand {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tagline {
+        font-size: 0.85rem;
+        opacity: 0.9;
+        margin-top: 2px;
+    }
+}
