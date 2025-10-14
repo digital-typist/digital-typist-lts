@@ -15,8 +15,8 @@ export default function Footer() {
         </div>
         <div>
           📧{" "}
-          <a href="mailto:digitaltypistim@gmail.com">
-            digitaltypistim@gmail.com
+          <a href="mailto:digicomclass@gmail.com">
+            digicomclass@gmail.com
           </a>
         </div>
       </div>
