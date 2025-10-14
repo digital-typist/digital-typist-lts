@@ -113,15 +113,36 @@ export default function HomePage() {
       </section>
 
       {/* ===== WHY CHOOSE US ===== */}
-      <section className="why">
-        <h2>Why Choose Digital Typist</h2>
-        <ul className="usps">
-          <li>Multilingual support (Sanskrit · Gujarati · Hindi · English)</li>
-          <li>UGC & university formatting expertise</li>
-          <li>100% confidentiality</li>
-          <li>On-time delivery & free revision</li>
-        </ul>
-      </section>
+     <section className="why">
+  <h2>Why Choose Digital Typist</h2>
+  <div className="whyContent">
+    <ul className="usps">
+      <li>Multilingual support (Sanskrit · Gujarati · Hindi · English)</li>
+      <li>UGC & university formatting expertise</li>
+      <li>100% confidentiality</li>
+      <li>On-time delivery & free revision</li>
+    </ul>
+
+    <div className="whyCards">
+      <div className="whyCard">
+        <div className="icon">📝</div>
+        <div>
+          <h3>Transcription & Data Entry</h3>
+          <p>Auto to text — examination & research data support.</p>
+        </div>
+      </div>
+
+      <div className="whyCard">
+        <div className="icon">💬</div>
+        <div>
+          <h3>Get a Quote via WhatsApp</h3>
+          <p>Quick, ready-to-share consultation and pricing details.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* ===== TESTIMONIALS ===== */}
       <section id="reviews" className="testimonials">
