@@ -219,3 +219,52 @@
         padding: 20px;
     }
 }
+
+
+
+/* ===== Footer (Updated to match new layout) ===== */
+.siteFooter {
+    background: var(--brand);
+    color: var(--white);
+    text-align: center;
+    padding: 24px 16px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    font-size: 0.95rem;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.siteFooter a {
+    color: var(--white);
+    font-weight: 600;
+}
+
+.siteFooter a:hover {
+    opacity: 0.85;
+}
+
+.footerContact {
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.footerContact span {
+    color: var(--white);
+    opacity: 0.8;
+}
+
+.copyright {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footerContact {
+        font-size: 0.9rem;
+    }
+}
