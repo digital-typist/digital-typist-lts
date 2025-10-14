@@ -1,4 +1,3 @@
-import "./css/app.css";
 import "./globals.css";
 import "./css/home.css";
 import Header from "./js/Header";
@@ -11,11 +10,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" >
-      <body >
-        <Header />
-        <main>{children}</main>
-        <Footer />
+    <html lang="en">
+      <body>
+        <div className="siteWrapper">
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
