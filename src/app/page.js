@@ -1,5 +1,6 @@
 // src/app/page.js
 import ContactForm from "./js/ContactForm";
+import Image from "next/image";
 
 export const metadata = {
   title: "Digital Typist | Thesis Typing & Formatting Services India",
@@ -43,7 +44,7 @@ export default function HomePage() {
 
          <div className="heroImageWrapper">
            <div className="heroImageBox">
-             <image
+             <Image
                 src="/card_front.jpg"
                 alt="Person formatting a thesis on laptop"
                 className="heroImage"
