@@ -41,13 +41,14 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="heroImage">
-            <img
-              src="/hero-typing.jpg"
-              alt="Person formatting a thesis on laptop"
-              width="520"
-              height="360"
-            />
+         <div className="heroImageWrapper">
+           <div className="heroImageBox">
+             <image
+                src="/card.jpg"
+                alt="Person formatting a thesis on laptop"
+                className="heroImage"
+              />
+            </div>
           </div>
         </div>
       </header>

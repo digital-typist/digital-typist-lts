@@ -224,3 +224,40 @@
         padding: 20px 10px 100px;
     }
 }
+
+/* === Improved spacing under WhatsApp button === */
+.trust {
+    margin-top: 18px;
+    /* increased spacing */
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* === Hero Image Wrapper (fixed area) === */
+.heroImageWrapper {
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroImageBox {
+    width: 100%;
+    max-width: 420px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(10, 61, 98, 0.15);
+    background: #f0f4f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
