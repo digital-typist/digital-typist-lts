@@ -126,18 +126,68 @@
 }
 
 
-/* ===== OUR SERVICES ===== */
+/* ===== OUR SERVICES SECTION ===== */
 .services {
+    background: #f9f4ee;
+    /* ultra-light warm cream, barely tinted */
+    border-radius: 20px;
+    padding: 70px 40px 90px;
     margin-top: 80px;
+    box-shadow: 0 12px 36px rgba(10, 37, 64, 0.06),
+        0 4px 12px rgba(0, 0, 0, 0.04);
+    /* soft layered shadow */
     text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.services:hover {
+    box-shadow: 0 16px 48px rgba(10, 37, 64, 0.08),
+        0 6px 20px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
 }
 
 .services h2 {
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 600;
-    font-size: 1.9rem;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
     color: var(--brand);
     margin-bottom: 40px;
+    font-size: 1.9rem;
+}
+
+/* grid and card stay same */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    justify-items: center;
+    align-items: stretch;
+}
+
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.services {
+    background: #f9f4ee;
+    border-radius: 20px;
+    padding: 70px 40px 90px;
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3),
+        0 12px 36px rgba(10, 37, 64, 0.06),
+        0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
 /* responsive grid for cards */
