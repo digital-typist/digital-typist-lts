@@ -1,0 +1,105 @@
+/* ===== OUR SERVICES SECTION ===== */
+.services {
+    background: #f9f4ee;
+    border-radius: 16px;
+    padding: 60px 40px 70px;
+    margin: 60px auto;
+    max-width: 1100px;
+    box-shadow: 0 6px 18px rgba(10, 37, 64, 0.05);
+    text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.services:hover {
+    box-shadow: 0 10px 28px rgba(10, 37, 64, 0.08);
+    transform: translateY(-2px);
+}
+
+.services h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    color: var(--brand);
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+}
+
+/* ===== GRID FOR SERVICE CARDS ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    justify-items: center;
+    align-items: start;
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+/* centers the 4th card */
+.grid>*:last-child:nth-child(4) {
+    grid-column: 2;
+}
+
+/* ===== SERVICE CARDS ===== */
+.card {
+    background: #f0e1ca;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(10, 37, 64, 0.08);
+    padding: 28px 18px;
+    width: 260px;
+    height: 260px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(10, 37, 64, 0.12);
+}
+
+.card .icon {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--brand);
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.5;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 950px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .grid>*:last-child:nth-child(4) {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 650px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        width: 90%;
+        height: auto;
+    }
+
+    .services {
+        padding: 50px 20px 60px;
+    }
+}
