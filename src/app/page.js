@@ -5,6 +5,7 @@ import ContactForm from "./js/ContactForm";
 import "./css/hero.css";
 import "./css/home.css";
 import "./css/services.css";
+import "./css/how.css";
 
 export const metadata = {
   title: "Digital Typist | Thesis Typing & Formatting Services India",
