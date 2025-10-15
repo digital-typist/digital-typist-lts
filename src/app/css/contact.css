@@ -1,0 +1,102 @@
+/* ===== CONTACT / GET A QUOTE SECTION ===== */
+.contact {
+    background: #f9f4ee;
+    border-radius: 16px;
+    padding: 70px 60px;
+    margin: 80px auto;
+    max-width: 1000px;
+    box-shadow: 0 6px 18px rgba(10, 37, 64, 0.05);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.contact:hover {
+    box-shadow: 0 10px 26px rgba(10, 37, 64, 0.08);
+    transform: translateY(-2px);
+}
+
+.contact h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    color: var(--brand);
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.9rem;
+}
+
+/* form wrapper */
+.contact form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* inputs */
+.contact input,
+.contact textarea {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    padding: 10px 14px;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    flex: 1 1 200px;
+    min-width: 200px;
+    outline: none;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 6px rgba(212, 149, 58, 0.3);
+}
+
+/* textarea full width */
+.contact textarea {
+    flex: 1 1 100%;
+    min-height: 90px;
+    resize: vertical;
+}
+
+/* submit button */
+.contact button {
+    background: var(--accent);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 12px 28px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact button:hover {
+    transform: translateY(-2px);
+    background: #c6842e;
+}
+
+/* responsive: stack inputs */
+@media (max-width: 768px) {
+    .contact form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contact input,
+    .contact textarea {
+        width: 100%;
+    }
+
+    .contact button {
+        width: 100%;
+    }
+
+    .contact {
+        padding: 50px 24px;
+        margin: 60px 16px;
+    }
+}
