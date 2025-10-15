@@ -5,7 +5,7 @@ export default function ContactForm() {
   const [form, setForm] = useState({
     name: "",
     email: "",
-    university: "",
+    // university: "",
     phone: "",
     message: "",
   });
@@ -40,7 +40,8 @@ export default function ContactForm() {
       return;
     }
 
-    const whatsappMessage = `Hello Digital Typist,%0A%0AName: ${form.name}%0AEmail: ${form.email}%0AUniversity: ${form.university}%0APhone: ${form.phone}%0AMessage: ${form.message}`;
+    const whatsappMessage = `Hello Digital Typist,%0A%0AName: ${form.name}%0AEmail: ${form.email}%0APhone: ${form.phone}%0AMessage: ${form.message}`;
+
     const url = `https://wa.me/918849165907?text=${whatsappMessage}`;
     window.open(url, "_blank");
   };
@@ -63,13 +64,13 @@ export default function ContactForm() {
         onChange={handleChange}
         required
       />
-      <input
+      {/* <input
         type="text"
         name="university"
         placeholder="University"
         value={form.university}
         onChange={handleChange}
-      />
+      /> */}
       <input
         type="tel"
         name="phone"
