@@ -163,7 +163,7 @@ export default function HomePage() {
         <form action="https://wa.me/918849165907" method="get" target="_blank">
           <input type="text" name="name" placeholder="Name" required />
           <input type="email" name="email" placeholder="Email" required />
-          <input type="text" name="university" placeholder="University" />
+          {/* <input type="text" name="university" placeholder="University" /> */}
           <input type="tel" name="phone" placeholder="Phone" required />
           <textarea name="message" placeholder="Message" rows="3"></textarea>
           <button type="submit">WhatsApp Us</button>
