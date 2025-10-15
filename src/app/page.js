@@ -8,6 +8,7 @@ import "./css/services.css";
 import "./css/how.css";
 import "./css/why.css";
 import "./css/testimonials.css";
+import "./css/contact.css";
 
 export const metadata = {
   title: "Digital Typist | Thesis Typing & Formatting Services India",
