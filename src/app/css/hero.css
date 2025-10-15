@@ -1,0 +1,112 @@
+/* ===== HERO SECTION ===== */
+.hero {
+    background: #f0e1ca;
+    border-radius: 16px;
+    padding: 70px 50px;
+    margin-top: 40px;
+    box-shadow: 0 8px 32px rgba(10, 37, 64, 0.08),
+        0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.hero:hover {
+    box-shadow: 0 12px 40px rgba(10, 37, 64, 0.12),
+        0 4px 12px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+}
+
+.heroInner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: nowrap;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.heroText {
+    flex: 1 1 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.heroText h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: var(--brand);
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.heroText .subtitle {
+    font-family: "Inter", sans-serif;
+    font-size: 1.05rem;
+    color: var(--text);
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.cta {
+    margin-top: 0;
+}
+
+.btn.secondary {
+    background: var(--accent);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn.secondary:hover {
+    opacity: 0.9;
+}
+
+.heroImageWrapper {
+    flex: 1 1 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroImageBox {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.08);
+    background: var(--white);
+}
+
+.heroImage {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .heroInner {
+        flex-direction: column;
+        text-align: center;
+        gap: 32px;
+    }
+
+    .heroText h1 {
+        font-size: 2rem;
+    }
+
+    .heroText .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .heroImageBox {
+        max-width: 90%;
+    }
+}
