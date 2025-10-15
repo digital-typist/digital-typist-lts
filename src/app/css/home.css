@@ -8,15 +8,5 @@
   background: var(--bg);
 }
 
-/* ===== WHY CHOOSE SECTION ===== */
-.why {
-  background: #f9f4ee;
-  border-radius: 16px;
-  padding: 70px 60px;
-  margin: 80px auto;
-  max-width: 1100px;
-  box-shadow: 0 6px 18px rgba(10, 37, 64, 0.05);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-/* rest sections (why, testimonials, contact) remain unchanged */
+/* ===== TESTIMONIALS SECTION ===== */
+/* (starts right after why section — keep unchanged below) */
