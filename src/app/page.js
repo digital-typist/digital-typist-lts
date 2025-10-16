@@ -68,9 +68,7 @@ export default function HomePage() {
         <div className="grid">
           <div className="card">
             <div className="icon">🧑‍🎓</div>
-            <h3>
-              <b>PhD Thesis </b>
-            </h3>
+            <h3>PhD Thesis</h3>
             <p>
               UGC & University-compliant layout, TOC, margins, references —
               final Word & PDF delivery.
