@@ -25,12 +25,14 @@ export default function HomePage() {
           {/* Left Side: Text Content */}
           <div className="heroText">
             <h1 className="title">
-              Accurate Thesis Typing & Formatting for PhD Scholars
+              Complete Academic & Research Support — Trusted by Scholars,
+              Universities, and Institutions
             </h1>
 
             <p className="subtitle">
-              Expert thesis support in Sanskrit, Hindi, Gujarati & English –
-              formatted to UGC standards, delivered with precision and care.
+              From PhD theses to government digitization projects, Digital
+              Typist provides professional, multilingual, and UGC-compliant
+              documentation services in Sanskrit, Hindi, Gujarati, and English.
             </p>
 
             <div className="cta">
@@ -65,8 +67,8 @@ export default function HomePage() {
         <h2>Our Services</h2>
         <div className="grid">
           <div className="card">
-            <div className="icon">📝</div>
-            <h3>Thesis Typing & Formatting</h3>
+            <div className="icon">🧑‍🎓</div>
+            <h3>PhD Thesis</h3>
             <p>
               UGC & University-compliant layout, TOC, margins, references —
               final Word & PDF delivery.
@@ -83,19 +85,65 @@ export default function HomePage() {
           </div>
 
           <div className="card">
-            <div className="icon">🌐</div>
-            <h3>Multilingual Typing</h3>
+            <div className="icon">📄</div>
+            <h3>Proposal</h3>
             <p>
-              Sanskrit · Gujarati · Hindi · English — Unicode & transliteration
-              support.
+              Professional proposal preparation with accurate structure,
+              citations & clean formatting.
             </p>
           </div>
 
           <div className="card">
-            <div className="icon">🔊</div>
-            <h3>Transcription & Data Entry</h3>
+            <div className="icon">💻</div>
+            <h3>Data Entry</h3>
             <p>
-              Audio → text conversion & research data entry (fast & accurate).
+              Fast and reliable academic or research data entry with attention
+              to detail.
+            </p>
+          </div>
+
+          <div className="card">
+            <div className="icon">📑</div>
+            <h3>Research Paper</h3>
+            <p>
+              Academic paper formatting and proofreading for journal submission
+              readiness.
+            </p>
+          </div>
+
+          <div className="card">
+            <div className="icon">🧾</div>
+            <h3>Formatting</h3>
+            <p>
+              Consistent layout for margins, fonts, page numbers, and references
+              — perfectly styled.
+            </p>
+          </div>
+
+          <div className="card">
+            <div className="icon">✍️</div>
+            <h3>Book Writing</h3>
+            <p>
+              Manuscript typing, editing & layout setup for authors and
+              researchers.
+            </p>
+          </div>
+
+          <div className="card">
+            <div className="icon">🎧</div>
+            <h3>Transcription</h3>
+            <p>
+              Accurate conversion of audio interviews and lectures into clean,
+              editable text.
+            </p>
+          </div>
+
+          <div className="card">
+            <div className="icon">🪶</div>
+            <h3>Manuscript Digitization</h3>
+            <p>
+              Convert handwritten or scanned manuscripts into fully typed,
+              editable documents.
             </p>
           </div>
         </div>
