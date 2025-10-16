@@ -65,6 +65,10 @@ export default function HomePage() {
       {/* ===== SERVICES SECTION ===== */}
       <section id="services" className="services">
         <h2>Our Services</h2>
+        <h3>
+          From script to screen — we transform research into readable, reliable,
+          and ready-to-submit documents
+        </h3>
         <div className="grid">
           <div className="card">
             <div className="icon">🧑‍🎓</div>
