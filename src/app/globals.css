@@ -2,11 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
 
 :root {
-  --brand: #0a2540;
+  --brand: #133b68;
   /* deep navy */
   --accent: #d4953a;
   /* warm gold/orange */
   --bg: #f8f5f1;
+  --headerBg: #fdf4e9;
   /* soft cream */
   --text: #1e1e1e;
   --muted: #555;
@@ -24,9 +25,37 @@
   padding: 0;
 }
 
+/* ===== GLOBAL RESET FOR TOP SPACING ===== */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.4;
+  background: var(--bg);
+}
+
+/* Remove gap under sticky/fixed headers */
+main,
+section:first-of-type {
+  margin-top: 0;
+  padding-top: 40px;
+  /* optional: gives soft breathing space below header */
+}
+
+/* Ensure all first titles start tight */
+h1:first-child,
+h2:first-child {
+  margin-top: 0;
+}
+
 /* ===== BASE TYPOGRAPHY ===== */
 body {
   font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
   font-weight: 400;
   background: var(--bg);
   color: var(--text);

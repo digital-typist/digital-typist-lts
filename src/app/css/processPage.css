@@ -1,0 +1,113 @@
+/* ===== PROCESS PAGE ===== */
+.processPage {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 70px 20px 120px;
+    /* reduced top padding */
+    background: var(--bg);
+}
+
+/* main title */
+.processPage .pageTitle {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: var(--brand);
+    text-align: center;
+    margin-top: 0;
+    /* removes default h1 spacing */
+    margin-bottom: 8px;
+    line-height: 1.1;
+}
+
+/* italic tagline below title */
+.processPage h2.pageTagline {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.7rem;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--brand);
+    text-align: center;
+    margin-top: 0.4rem;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+/* subtitle (description text) */
+.processPage .pageSubtitle {
+    font-family: "Inter", sans-serif;
+    font-size: 1.05rem;
+    color: var(--text);
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+    line-height: 1.6;
+}
+
+/* step cards */
+.stepsWrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 26px;
+    justify-items: center;
+}
+
+.stepCard {
+    background: #f0e1ca;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(10, 37, 64, 0.08);
+    padding: 26px 22px;
+    text-align: left;
+    width: 100%;
+    max-width: 340px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.stepCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(10, 37, 64, 0.12);
+}
+
+/* number circle */
+.stepNum {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--white);
+    background: var(--brand);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.stepCard p {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* remove extra space between header and title */
+.processPage .pageTitle:first-of-type {
+    margin-top: 0;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .processPage {
+        padding: 50px 16px 80px;
+    }
+
+    .pageTitle {
+        font-size: 1.8rem;
+    }
+
+    .pageSubtitle {
+        font-size: 0.95rem;
+    }
+}

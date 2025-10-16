@@ -1,0 +1,157 @@
+/* ===== SERVICES PAGE ===== */
+.servicesPage {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 70px 20px 120px;
+    /* reduced top padding for tighter alignment */
+    background: var(--bg);
+}
+
+/* main page title */
+.pageTitle {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    /* clean readable size */
+    color: var(--brand);
+    text-align: center;
+    margin-top: 0;
+    /* removes unwanted gap under header */
+    margin-bottom: 50px;
+    letter-spacing: 0.3px;
+    line-height: 1.15;
+}
+
+/* each service card */
+.serviceBlock {
+    background: #f0e1ca;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(10, 37, 64, 0.06);
+    padding: 40px 30px;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* elegant hover polish */
+.serviceBlock:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(10, 37, 64, 0.12);
+}
+
+/* subtle accent glow on hover */
+.serviceBlock::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    background: linear-gradient(145deg,
+            rgba(212, 149, 58, 0.08),
+            rgba(10, 37, 64, 0.05));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.serviceBlock:hover::before {
+    opacity: 1;
+}
+
+/* headings and text */
+.serviceBlock h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 800;
+    color: var(--brand);
+    margin-bottom: 12px;
+    font-size: 1.6rem;
+    position: relative;
+    z-index: 1;
+}
+
+.serviceBlock p {
+    font-family: "Inter", sans-serif;
+    font-size: 1.05rem;
+    color: var(--text);
+    line-height: 1.75;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+/* bullet list */
+.serviceBlock ul {
+    list-style: disc;
+    padding-left: 24px;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.serviceBlock li {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    color: var(--text);
+    margin-bottom: 8px;
+    line-height: 1.65;
+    transition: color 0.25s ease;
+}
+
+.serviceBlock li:hover {
+    color: var(--brand);
+}
+
+/* tagline */
+.tagline {
+    display: block;
+    font-family: "Inter", sans-serif;
+    color: #133b68;
+    font-style: italic;
+    font-size: 1.05rem;
+    margin-top: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+/* subtle card entry animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.serviceBlock {
+    animation: fadeUp 0.6s ease both;
+}
+
+/* responsive design */
+@media (max-width: 768px) {
+    .servicesPage {
+        padding: 50px 16px 80px;
+    }
+
+    .pageTitle {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+
+    .serviceBlock {
+        padding: 32px 22px;
+    }
+
+    .serviceBlock h2 {
+        font-size: 1.35rem;
+    }
+
+    .serviceBlock p,
+    .serviceBlock li,
+    .tagline {
+        font-size: 1rem;
+    }
+}

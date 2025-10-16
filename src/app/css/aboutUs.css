@@ -1,0 +1,185 @@
+/* ===== ABOUT US PAGE STYLING ===== */
+
+.aboutSection {
+    max-width: var(--max-width);
+    margin: 60px auto 100px;
+    padding: 20px;
+    font-family: "Cormorant Garamond", serif;
+}
+
+/* ===== HEADER SECTION ===== */
+.aboutSection h1 {
+    text-align: center;
+    color: var(--brand);
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+
+.aboutSection h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--accent);
+    margin: 10px auto 20px;
+    border-radius: 2px;
+}
+
+.aboutSection h2 {
+    text-align: center;
+    color: var(--text);
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.aboutSection h2 strong {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+/* ===== FULL WIDTH "WHO WE ARE" CARD ===== */
+.fullCard {
+    background: #f7efe2;
+    border-radius: 12px;
+    padding: 28px 24px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(10, 61, 98, 0.08);
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fullCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(10, 61, 98, 0.15);
+}
+
+.fullCard .icon {
+    font-size: 2.8rem;
+    margin-bottom: 12px;
+}
+
+.fullCard h3 {
+    color: var(--brand);
+    font-size: 1.6rem;
+    margin-bottom: 14px;
+    font-weight: 700;
+}
+
+.fullCard p {
+    color: var(--text);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.fullCard p strong {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+/* ===== GRID FOR MISSION + VISION ===== */
+.aboutGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.aboutCard {
+    background: #f7efe2;
+    border-radius: 12px;
+    padding: 26px 20px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(10, 61, 98, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aboutCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(10, 61, 98, 0.15);
+}
+
+.aboutCard .icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.aboutCard h3 {
+    color: var(--brand);
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.aboutCard p {
+    color: var(--text);
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    font-weight: 800;
+}
+
+.aboutCard p strong {
+    color: var(--accent);
+    font-weight: 900;
+}
+
+/* ===== QUOTE SECTION ===== */
+.aboutQuote {
+    margin-top: 60px;
+    text-align: center;
+    font-style: italic;
+    font-weight: 900;
+    color: var(--accent);
+    font-size: 1.6rem;
+    background: #f7efe2;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(10, 61, 98, 0.08);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .aboutSection {
+        margin: 40px auto 80px;
+        padding: 16px;
+    }
+
+    .aboutSection h1 {
+        font-size: 2rem;
+    }
+
+    .aboutSection h2 {
+        font-size: 1.3rem;
+    }
+
+    .fullCard {
+        padding: 20px;
+    }
+
+    .fullCard .icon {
+        font-size: 2.4rem;
+    }
+
+    .aboutGrid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .aboutCard {
+        padding: 18px;
+    }
+
+    .aboutCard .icon {
+        font-size: 2rem;
+    }
+
+    .aboutQuote {
+        font-size: 1rem;
+        padding: 18px;
+    }
+}

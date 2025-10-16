@@ -7,8 +7,9 @@ export default function Footer() {
         <div>
           📞{" "}
           <a href="tel:+918849165907" className="inline">
-            +918849165907
+            +918849165907 
           </a>
+          <a> || </a>
           <a href="tel:+919924345007" className="inline">
              +919924345007
           </a>

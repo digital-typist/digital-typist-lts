@@ -3,7 +3,9 @@
     background: #f0e1ca;
     border-radius: 16px;
     padding: 70px 50px;
-    margin-top: 40px;
+    margin-top: auto;
+    margin-bottom: 70px;
+    border-bottom: 2px solid rgba(10, 37, 64, 0.05);
     box-shadow: 0 8px 32px rgba(10, 37, 64, 0.08),
         0 2px 8px rgba(0, 0, 0, 0.04);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -108,5 +110,62 @@
 
     .heroImageBox {
         max-width: 90%;
+    }
+}
+
+
+/* ===== CTA DUAL BUTTONS ===== */
+.cta.dual {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.ctaLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    background: #133b68;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.ctaLink:hover {
+    background: var(--accent);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.divider {
+    color: var(--brand);
+    font-weight: 400;
+    opacity: 0.6;
+    font-size: 1.2rem;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 700px) {
+    .cta.dual {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .ctaLink {
+        justify-content: center;
     }
 }

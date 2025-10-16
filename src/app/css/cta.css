@@ -1,0 +1,66 @@
+/* ===== FINAL CTA SECTION ===== */
+.finalCta {
+    background: #fdfaf4;
+    border-radius: 16px;
+    margin: 80px auto;
+    max-width: 900px;
+    padding: 60px 40px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(10, 37, 64, 0.05);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.finalCta:hover {
+    box-shadow: 0 10px 26px rgba(10, 37, 64, 0.08);
+    transform: translateY(-2px);
+    
+}
+
+.ctaInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.ctaLine1 {
+    font-family: "Cormorant Garamond", serif;
+    color: var(--brand);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.ctaLine2 {
+    font-family: "Inter", sans-serif;
+    color: var(--muted);
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.finalCta .btn {
+    margin-top: 18px;
+    padding: 12px 28px;
+    background: var(--brand);;
+}
+
+.finalCta .btn:hover {
+    background: #d4953a;    /* warm gold hover (from screenshot) */
+    transform: translateY(-2px);
+    color: #fff;            /* keep text white for contrast */
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .finalCta {
+        padding: 40px 24px;
+        margin: 60px 16px;
+    }
+
+    .ctaLine1 {
+        font-size: 1.15rem;
+    }
+
+    .ctaLine2 {
+        font-size: 1rem;
+    }
+}

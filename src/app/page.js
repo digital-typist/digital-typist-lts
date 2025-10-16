@@ -9,6 +9,7 @@ import "./css/how.css";
 import "./css/why.css";
 import "./css/testimonials.css";
 import "./css/contact.css";
+import "./css/cta.css";
 
 export const metadata = {
   title: "Digital Typist | Thesis Typing & Formatting Services India",
@@ -35,14 +36,21 @@ export default function HomePage() {
               documentation services in Sanskrit, Hindi, Gujarati, and English.
             </p>
 
-            <div className="cta">
+            <div className="cta dual">
               <a
-                href="https://wa.me/918849165907?text=Hello%20Digital%20Typist%2C%20I%20need%20help%20with%20my%20thesis"
+                href="mailto:digitalthesis.typist@gmail.com?subject=Free%20Quote%20Request"
+                className="ctaLink"
+              >
+                ✉️ <strong>Get a Free Quote</strong>
+              </a>
+              <span className="divider">|</span>
+              <a
+                href="https://wa.me/918849165907?text=Hello%20Digital%20Typist%2C%20I%20want%20to%20discuss%20my%20project"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn secondary"
+                className="ctaLink"
               >
-                Message on WhatsApp
+                💬 <strong>Message on WhatsApp</strong>
               </a>
             </div>
           </div>
@@ -177,22 +185,22 @@ export default function HomePage() {
         <h2>Why Choose Digital Typist</h2>
         <div className="whyContent">
           <ul className="usps">
-            <li>
-              Multilingual support (Sanskrit · Gujarati · Hindi · English)
-            </li>
-            <li>UGC & university formatting expertise</li>
+            <li>10+ Years of Experience in Academic Documentation</li>
+            <li>Multilingual Expertise — Sanskrit, Hindi, Gujarati, English</li>
             <li>100% confidentiality</li>
+            <li>UGC & university formatting expertise</li>
             <li>On-time delivery & free revision</li>
+            <li>Fast Turnaround with Free Revisions</li>
           </ul>
 
           <div className="whyCards">
-            <div className="whyCard">
+            {/* <div className="whyCard">
               <div className="icon">📝</div>
               <div>
                 <h3>Transcription & Data Entry</h3>
                 <p>Auto to text — examination & research data support.</p>
               </div>
-            </div>
+            </div> */}
 
             <div className="whyCard">
               <div className="icon">💬</div>
@@ -210,25 +218,58 @@ export default function HomePage() {
         <h2>What Clients Say</h2>
         <blockquote className="testi">
           <p>
-            Perfect formatting for my PhD thesis — saved me valuable time during
+            Digital Typist made my PhD thesis submission completely stress-free.
+            Professional, timely, and reliable.
+          </p>
+          <footer>— Dr. Meena Joshi, Gujarat Vidyapith</footer>
+        </blockquote>
+
+        <br />
+
+        <blockquote className="testi">
+          <p>
+            They formatted and edited my research paper perfectly for journal
             submission.
           </p>
-          <footer>— K. Patel, Gujarat University</footer>
+          <footer>— Prof. N. Sharma, Delhi University</footer>
         </blockquote>
       </section>
 
+      {/* ===== FINAL CTA SECTION ===== */}
+      <section className="finalCta">
+        <div className="ctaInner">
+          <p className="ctaLine1">
+            🎓{" "}
+            <strong>
+              Partner with professionals who understand academic precision.
+            </strong>
+          </p>
+          <p className="ctaLine2">
+            📞 <em>Get your project started today.</em>
+          </p>
+          <a
+            href="https://wa.me/918849165907?text=Hello%20Digital%20Typist%2C%20I%20want%20to%20start%20my%20project"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn secondary"
+          >
+            Message Us on WhatsApp
+          </a>
+        </div>
+      </section>
+
       {/* ===== CONTACT FORM ===== */}
-      <section className="contact">
+      {/* <section className="contact">
         <h2>Get a Quote</h2>
         <form action="https://wa.me/918849165907" method="get" target="_blank">
           <input type="text" name="name" placeholder="Name" required />
           <input type="email" name="email" placeholder="Email" required />
-          {/* <input type="text" name="university" placeholder="University" /> */}
+           <input type="text" name="university" placeholder="University" /> 
           <input type="tel" name="phone" placeholder="Phone" required />
           <textarea name="message" placeholder="Message" rows="3"></textarea>
           <button type="submit">WhatsApp Us</button>
         </form>
-      </section>
+      </section> */}
     </section>
   );
 }

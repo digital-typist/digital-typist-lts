@@ -1,6 +1,6 @@
 /* ===== OUR SERVICES SECTION ===== */
 .services {
-    background: #f9f4ee;
+    background: #fdfaf4;
     border-radius: 16px;
     padding: 60px 40px 70px;
     margin: 60px auto;
@@ -25,10 +25,10 @@
 
 .services h3 {
     font-family: "Playfair Display", serif;
-    font-weight: 500;
+    font-weight: 100;
     color: var(--brand);
     margin-bottom: 40px;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
 }
 
 /* ===== GRID FOR SERVICE CARDS ===== */
