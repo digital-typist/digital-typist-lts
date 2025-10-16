@@ -12,7 +12,7 @@ export default function Header() {
       <div className="headerContainer">
         <div className="brandBlock">
           <h1 className="brandName">DIGITAL TYPIST</h1>
-          <p className="tagline">Your Academic Partner for Thesis & Research</p>
+          <p className="tagline">From script to screen — we transform research into readable, reliable, and ready-to-submit documents</p>
         </div>
 
         {/* ===== Hamburger for mobile ===== */}
