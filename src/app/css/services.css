@@ -17,6 +17,14 @@
 
 .services h2 {
     font-family: "Playfair Display", serif;
+    font-weight: 800;
+    color: var(--brand);
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+}
+
+.services h3 {
+    font-family: "Playfair Display", serif;
     font-weight: 700;
     color: var(--brand);
     margin-bottom: 40px;
