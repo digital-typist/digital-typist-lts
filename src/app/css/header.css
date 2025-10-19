@@ -2,58 +2,110 @@
 .mainHeader {
     background: var(--headerBg);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 6px 20px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-/* ===== FLEX CONTAINER ===== */
-.headerContainer {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 14px 24px 10px;
+/* ===== TOP ROW ===== */
+.topRow {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
 }
 
-/* ===== LOGO ===== */
-.logoBlock img {
-    width: 90px;
+.logoBlock {
+    position: absolute;
+    left: 18px;
+    top: 4px;
+}
+
+.siteLogo {
+    width: 85px;
     height: auto;
+    display: block;
 }
 
-/* ===== BRAND CENTER ===== */
 .brandBlock {
-    flex: 1;
     text-align: center;
+    line-height: 1.2;
 }
 
 .brandName {
-    font-size: 1.8rem;
-    font-weight: 800;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.85rem;
+    font-weight: 700;
     color: var(--brand);
-    margin: 0;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.4px;
+    margin-bottom: 3px;
 }
 
 .tagline {
+    font-family: "Inter", sans-serif;
     font-size: 0.9rem;
-    color: var(--muted);
-    margin-top: 2px;
+    color: var(--text);
+    font-style: italic;
+    margin-top: 0;
 }
 
-/* ===== MENU TOGGLE ===== */
+/* ===== NAVIGATION ROW ===== */
+.navRow {
+    background: #fcf6ed;
+    /* soft contrast */
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navLinks {
+    display: flex;
+    justify-content: space-between;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 10px 40px;
+}
+
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.navLinks a {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--text);
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navLinks a:hover {
+    color: var(--brand);
+    transform: translateY(-1px);
+}
+
+/* ===== HAMBURGER MENU ===== */
 .menuToggle {
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 26px;
-    height: 18px;
+    width: 22px;
+    height: 16px;
     background: transparent;
     border: none;
     cursor: pointer;
-    z-index: 1002;
+    position: absolute;
+    right: 20px;
+    top: 10px;
 }
 
 .menuToggle .bar {
@@ -61,104 +113,34 @@
     height: 3px;
     background: var(--text);
     border-radius: 2px;
-    transition: all 0.3s ease;
-}
-
-/* X animation */
-.menuToggle.open .bar:nth-child(1) {
-    transform: rotate(45deg) translate(4px, 5px);
-}
-
-.menuToggle.open .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.menuToggle.open .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(4px, -5px);
-}
-
-/* ===== NAVIGATION ===== */
-.navLinks {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
-    padding: 10px 0;
-    transition: all 0.3s ease;
-}
-
-.navLinks a {
-    color: var(--text);
-    font-weight: 600;
-    font-size: 1rem;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.navLinks a:hover {
-    color: var(--brand);
-}
-
-.icon {
-    font-size: 1.2rem;
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
-    .headerContainer {
-        padding: 10px 18px;
+@media (max-width: 768px) {
+    .siteLogo {
+        width: 70px;
     }
 
-    .menuToggle {
-        display: flex;
+    .brandName {
+        font-size: 1.5rem;
+    }
+
+    .tagline {
+        font-size: 0.8rem;
     }
 
     .navLinks {
-        display: none;
         flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--white);
-        box-shadow: 0 8px 25px rgba(10, 37, 64, 0.15);
-        border-radius: 0 0 12px 12px;
-        text-align: center;
-        padding: 18px 0;
-        z-index: 1001;
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    .navLinks.open {
-        display: flex;
-        opacity: 1;
-        visibility: visible;
-        animation: fadeIn 0.25s ease;
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        align-items: center;
+        gap: 8px;
+        padding: 10px 0;
     }
 
     .navLinks a {
         color: var(--brand);
-        font-weight: 700;
-        font-size: 1.05rem;
-        padding: 10px 0;
     }
 
-    .icon {
-        font-size: 1.3rem;
+    .menuToggle {
+        display: flex;
     }
 }
