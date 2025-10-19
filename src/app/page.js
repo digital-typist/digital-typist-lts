@@ -38,12 +38,13 @@ export default function HomePage() {
 
             <div className="cta dual">
               <a
-                href="mailto:digitalthesis.typist@gmail.com?subject=Free%20Quote%20Request"
+                href="https://wa.me/918849165907?text=Hello%20Digital%20Typist%2C%20I%20want%20to%20discuss%20my%20project"
                 className="ctaLink"
+                // href="mailto:digitalthesis.typist@gmail.com?subject=Free%20Quote%20Request"
               >
-                ✉️ <strong>Get a Free Quote</strong>
+                💬 <strong>Get a Free Quote</strong>
               </a>
-              <span className="divider">|</span>
+              {/* <span className="divider">|</span>
               <a
                 href="https://wa.me/918849165907?text=Hello%20Digital%20Typist%2C%20I%20want%20to%20discuss%20my%20project"
                 target="_blank"
@@ -51,7 +52,7 @@ export default function HomePage() {
                 className="ctaLink"
               >
                 💬 <strong>Message on WhatsApp</strong>
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -80,6 +81,8 @@ export default function HomePage() {
         <div className="grid">
           <div className="card">
             <div className="icon">🧑‍🎓</div>
+
+            {/* ==== PhD Thesis ==== */}
             <h3>PhD Thesis</h3>
             <p>
               UGC & University-compliant layout, TOC, margins, references —
@@ -87,15 +90,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="card">
-            <div className="icon">✍️</div>
-            <h3>Proofreading & Editing</h3>
-            <p>
-              Grammar, clarity, and citation style (APA / MLA / Vancouver)
-              review.
-            </p>
-          </div>
-
+          {/* ==== Proposal ==== */}
           <div className="card">
             <div className="icon">📄</div>
             <h3>Proposal</h3>
@@ -105,15 +100,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="card">
-            <div className="icon">💻</div>
-            <h3>Data Entry</h3>
-            <p>
-              Fast and reliable academic or research data entry with attention
-              to detail.
-            </p>
-          </div>
-
+          {/* ==== Research Paper ==== */}
           <div className="card">
             <div className="icon">📑</div>
             <h3>Research Paper</h3>
@@ -123,15 +110,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="card">
-            <div className="icon">🧾</div>
-            <h3>Formatting</h3>
-            <p>
-              Consistent layout for margins, fonts, page numbers, and references
-              — perfectly styled.
-            </p>
-          </div>
-
+          {/* ==== Book Writing ==== */}
           <div className="card">
             <div className="icon">✍️</div>
             <h3>Book Writing</h3>
@@ -141,6 +120,7 @@ export default function HomePage() {
             </p>
           </div>
 
+          {/* ==== Transcription ==== */}
           <div className="card">
             <div className="icon">🎧</div>
             <h3>Transcription</h3>
@@ -150,12 +130,43 @@ export default function HomePage() {
             </p>
           </div>
 
+          {/* ==== Manuscript Digitization ==== */}
           <div className="card">
             <div className="icon">🪶</div>
             <h3>Manuscript Digitization</h3>
             <p>
               Convert handwritten or scanned manuscripts into fully typed,
               editable documents.
+            </p>
+          </div>
+
+          {/* ==== Proofreading & Editing ==== */}
+          <div className="card">
+            <div className="icon">✍️</div>
+            <h3>Proofreading & Editing</h3>
+            <p>
+              Grammar, clarity, and citation style (APA / MLA / Vancouver)
+              review.
+            </p>
+          </div>
+
+          {/* ==== Formatting ==== */}
+          <div className="card">
+            <div className="icon">🧾</div>
+            <h3>Formatting</h3>
+            <p>
+              Consistent layout for margins, fonts, page numbers, and references
+              — perfectly styled.
+            </p>
+          </div>
+
+          {/* ==== Data Entry ==== */}
+          <div className="card">
+            <div className="icon">💻</div>
+            <h3>Data Entry</h3>
+            <p>
+              Fast and reliable academic or research data entry with attention
+              to detail.
             </p>
           </div>
         </div>
@@ -202,13 +213,20 @@ export default function HomePage() {
               </div>
             </div> */}
 
-            <div className="whyCard">
-              <div className="icon">💬</div>
-              <div>
-                <h3>Get a Quote via WhatsApp</h3>
-                <p>Quick, ready-to-share consultation and pricing details.</p>
+            <a
+              href="https://wa.me/918849165907?text=Hello%20Digital%20Typist%2C%20I%20want%20to%20discuss%20my%20project"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="whyCardLink"
+            >
+              <div className="whyCard">
+                <div className="icon">💬</div>
+                <div>
+                  <h3>Get a Quote via WhatsApp</h3>
+                  <p>Quick, ready-to-share consultation and pricing details.</p>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </section>

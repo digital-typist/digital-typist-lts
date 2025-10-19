@@ -34,10 +34,6 @@ export default function Header() {
             Home
           </Link>
 
-          {/* ==== ABOUT US PAGE LINK ==== */}
-          <Link href="/about" scroll={true} onClick={() => setMenuOpen(false)}>
-            About Us
-          </Link>
 
           {/* ==== SERVICES PAGE LINK*/}
           <Link href="/services" scroll={true} onClick={() => setMenuOpen(false)}>
@@ -47,6 +43,11 @@ export default function Header() {
           {/* ==== PROCESS PAGE LINK*/}
           <Link href="/process" scroll={true} onClick={() => setMenuOpen(false)}>
             Process
+          </Link>
+          
+          {/* ==== ABOUT US PAGE LINK ==== */}
+          <Link href="/about" scroll={true} onClick={() => setMenuOpen(false)}>
+            About Us
           </Link>
 
           {/* ==== REVIEW PAGE LINK
