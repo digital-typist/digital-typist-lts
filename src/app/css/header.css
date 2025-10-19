@@ -14,34 +14,33 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    position: relative;
 }
 
+/* ===== LOGO BLOCK ===== */
+.logoBlock img {
+    width: 90px;
+    height: auto;
+}
+
+/* ===== BRAND CENTER BLOCK ===== */
 .brandBlock {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     flex: 1;
+    text-align: center;
 }
 
 .brandName {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 800;
     color: var(--brand);
     letter-spacing: 0.5px;
-    text-align: center;
+    margin: 0;
 }
 
 .tagline {
     font-size: 0.9rem;
     color: var(--muted);
     margin-top: 2px;
-    text-align: center;
-}
-
-.logoBlock img {
-    width: 80px;
-    height: auto;
 }
 
 /* ===== NAVIGATION LINKS ===== */
@@ -84,7 +83,7 @@
     background: transparent;
     border: none;
     cursor: pointer;
-    z-index: 1001;
+    z-index: 1002;
     transition: transform 0.3s ease;
 }
 
@@ -109,35 +108,39 @@
     transform: rotate(-45deg) translate(4px, -5px);
 }
 
-/* ===== RESPONSIVE MENU ===== */
-@media (max-width: 768px) {
+/* ===== RESPONSIVE MENU FIX ===== */
+@media (max-width: 900px) {
     .headerContainer {
-        flex-wrap: nowrap;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .brandBlock {
+        text-align: center;
+        flex: 1;
     }
 
     .menuToggle {
         display: flex;
     }
 
+    /* FLOATING DROPDOWN MENU */
     .navLinks {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 70px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 85%;
+        top: 100%;
+        left: 0;
+        width: 100%;
         background: var(--white);
-        border-radius: 12px;
+        border-radius: 0 0 12px 12px;
         box-shadow: 0 8px 25px rgba(10, 37, 64, 0.15);
-        padding: 20px 0;
+        padding: 18px 0;
         text-align: center;
-        z-index: 1000;
-        transition: all 0.3s ease;
+        z-index: 1001;
         opacity: 0;
         visibility: hidden;
+        transition: all 0.3s ease;
     }
 
     .navLinks.open {
@@ -150,12 +153,12 @@
     @keyframes fadeIn {
         from {
             opacity: 0;
-            transform: translate(-50%, -10px);
+            transform: translateY(-10px);
         }
 
         to {
             opacity: 1;
-            transform: translate(-50%, 0);
+            transform: translateY(0);
         }
     }
 
@@ -164,7 +167,6 @@
         font-weight: 700;
         font-size: 1.05rem;
         padding: 10px 0;
-        transition: background 0.3s ease;
     }
 
     .navLinks a:hover {
@@ -178,7 +180,7 @@
 }
 
 /* ===== DESKTOP MENU ===== */
-@media (min-width: 769px) {
+@media (min-width: 901px) {
     .navLinks {
         display: flex;
         position: static;
