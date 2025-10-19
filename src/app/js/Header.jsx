@@ -9,7 +9,14 @@ export default function Header() {
   return (
     <header className="mainHeader">
       <div className="headerContainer">
-        {/* ===== Brand Section ===== */}
+        {/* ===== Logo Section ===== */}
+        <div className="logoBlock">
+          <Link href="/" scroll={true}>
+            <img src="/logo_transparent.png" alt="Digital Typist Logo" className="siteLogo" />
+          </Link>
+        </div>
+
+        {/* ===== Brand Section (center aligned) ===== */}
         <div className="brandBlock">
           <h1 className="brandName">DIGITAL TYPIST</h1>
           <p className="tagline">Your Academic Partner for Thesis & Research</p>
@@ -28,33 +35,10 @@ export default function Header() {
 
         {/* ===== Navigation ===== */}
         <nav className={`navLinks ${menuOpen ? "open" : ""}`}>
-
-          {/* ==== HOME PAGE LINK ==== */}
-          <Link href="/" scroll={true} onClick={() => setMenuOpen(false)}>
-            Home
-          </Link>
-
-
-          {/* ==== SERVICES PAGE LINK*/}
-          <Link href="/services" scroll={true} onClick={() => setMenuOpen(false)}>
-            Services
-          </Link>
-
-          {/* ==== PROCESS PAGE LINK*/}
-          <Link href="/process" scroll={true} onClick={() => setMenuOpen(false)}>
-            Process
-          </Link>
-          
-          {/* ==== ABOUT US PAGE LINK ==== */}
-          <Link href="/about" scroll={true} onClick={() => setMenuOpen(false)}>
-            About Us
-          </Link>
-
-          {/* ==== REVIEW PAGE LINK
-          <Link href="/reviews" scroll={true} onClick={() => setMenuOpen(false)}>
-            Reviews
-          </Link> */}
-          
+          <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
+          <Link href="/services" onClick={() => setMenuOpen(false)}>Services</Link>
+          <Link href="/process" onClick={() => setMenuOpen(false)}>Process</Link>
+          <Link href="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
         </nav>
       </div>
     </header>

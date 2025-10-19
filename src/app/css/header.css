@@ -1,44 +1,65 @@
-/* ===== HEADER STYLING (Refined Layout) ===== */
+/* ===== HEADER STYLING ===== */
 .mainHeader {
     background: var(--headerBg);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    padding: 14px 24px;
-    padding-bottom: 10px;
+    padding: 12px 24px;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
+/* ===== CONTAINER ===== */
 .headerContainer {
     max-width: var(--max-width);
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
+    position: relative;
 }
 
+/* ===== LOGO ===== */
+.logoBlock {
+    flex: 0 0 auto;
+}
+
+.siteLogo {
+    width: 70px;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.siteLogo:hover {
+    transform: scale(1.05);
+}
+
+/* ===== BRAND (CENTERED) ===== */
 .brandBlock {
-    display: flex;
-    flex-direction: column;
+    text-align: center;
+    flex: 1;
 }
 
 .brandName {
-    font-size: 1.6rem;
-    font-weight: 800;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.8rem;
+    font-weight: 700;
     color: var(--brand);
     letter-spacing: 0.5px;
+    margin-bottom: 2px;
 }
 
 .tagline {
-    font-size: 0.9rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.95rem;
     color: var(--muted);
-    margin-top: 2px;
 }
 
+/* ===== NAVIGATION ===== */
 .navLinks {
     display: flex;
-    gap: 28px;
+    gap: 24px;
     align-items: center;
 }
 
@@ -46,6 +67,7 @@
     color: var(--text);
     font-weight: 600;
     font-size: 1rem;
+    text-decoration: none;
     transition: color 0.3s ease;
 }
 
@@ -72,22 +94,37 @@
     border-radius: 2px;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 900px) {
+    .headerContainer {
+        flex-wrap: nowrap;
+    }
+
+    .brandBlock {
+        order: 2;
+        flex: 1;
+    }
+
+    .logoBlock {
+        order: 1;
+    }
+
     .menuToggle {
         display: flex;
+        order: 3;
     }
 
     .navLinks {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 64px;
+        top: 70px;
         right: 24px;
         background: var(--white);
-        padding: 16px 20px;
+        padding: 18px 22px;
         border-radius: var(--radius);
         box-shadow: var(--shadow);
+        z-index: 999;
     }
 
     .navLinks.open {
@@ -96,7 +133,19 @@
 
     .navLinks a {
         color: var(--brand);
-        font-weight: 600;
         padding: 8px 0;
+        font-weight: 600;
+    }
+
+    .siteLogo {
+        width: 56px;
+    }
+
+    .brandName {
+        font-size: 1.4rem;
+    }
+
+    .tagline {
+        font-size: 0.85rem;
     }
 }
