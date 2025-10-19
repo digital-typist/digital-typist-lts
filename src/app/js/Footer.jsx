@@ -38,7 +38,7 @@ export default function Footer() {
 
           {/* === YOUTUBE === */}
           <a
-            href="https://www.youtube.com"
+            href="https://youtube.com/@digitaltypist3726?si=-l-vz0GL7aobzjos"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="YouTube"
@@ -48,7 +48,7 @@ export default function Footer() {
 
           {/* === LINKEDIN === */}
           <a
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/in/digital-typist-68356738b/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
