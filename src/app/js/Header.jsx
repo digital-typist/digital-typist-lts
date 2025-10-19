@@ -23,14 +23,16 @@ export default function Header() {
         </div>
 
         {/* ===== RIGHT MENU BUTTON ===== */}
-        <button
-          className={`menuToggle ${menuOpen ? "open" : ""}`}
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle navigation"
-        >
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
+        <button className={`menuToggle ${menuOpen ? "open" : ""}`}
+              onClick={() => { setMenuOpen(!menuOpen);
+                document.querySelector(".navRow")?.classList.toggle("open");
+              }
+            }
+              aria-label="Toggle navigation"
+            >
+              <span className="bar"></span>
+              <span className="bar"></span>
+              <span className="bar"></span>
         </button>
       </div>
 
