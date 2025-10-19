@@ -8,21 +8,28 @@ export default function Header() {
 
   return (
     <header className="mainHeader">
-      <div className="headerContainer">
-        {/* ===== Logo Section ===== */}
-        <div className="logoBlock">
-          <Link href="/" scroll={true}>
-            <img src="/logo_transparent.png" alt="Digital Typist Logo" className="siteLogo" />
+      {/* ===== Top Section: Logo + Brand ===== */}
+      <div className="topRow">
+        {/* Logo */}
+        <div className="logoBlock" suppressHydrationWarning>
+          <Link href="/" prefetch={false}>
+            <img
+              src="/logo_transparent.png"
+              alt="Digital Typist Logo"
+              className="siteLogo"
+            />
           </Link>
         </div>
 
-        {/* ===== Brand Section (center aligned) ===== */}
+        {/* Brand Name + Tagline */}
         <div className="brandBlock">
           <h1 className="brandName">DIGITAL TYPIST</h1>
           <p className="tagline">Your Academic Partner for Thesis & Research</p>
         </div>
+      </div>
 
-        {/* ===== Hamburger for mobile ===== */}
+      {/* ===== Navigation Row ===== */}
+      <nav className={`navRow ${menuOpen ? "open" : ""}`}>
         <button
           className="menuToggle"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -33,14 +40,21 @@ export default function Header() {
           <span className="bar"></span>
         </button>
 
-        {/* ===== Navigation ===== */}
-        <nav className={`navLinks ${menuOpen ? "open" : ""}`}>
-          <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
-          <Link href="/services" onClick={() => setMenuOpen(false)}>Services</Link>
-          <Link href="/process" onClick={() => setMenuOpen(false)}>Process</Link>
-          <Link href="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
-        </nav>
-      </div>
+        <div className="navLinks">
+          <Link href="/" scroll={true} onClick={() => setMenuOpen(false)}>
+            Home
+          </Link>
+          <Link href="/services" scroll={true} onClick={() => setMenuOpen(false)}>
+            Services
+          </Link>
+          <Link href="/process" scroll={true} onClick={() => setMenuOpen(false)}>
+            Process
+          </Link>
+          <Link href="/about" scroll={true} onClick={() => setMenuOpen(false)}>
+            About Us
+          </Link>
+        </div>
+      </nav>
     </header>
   );
 }
