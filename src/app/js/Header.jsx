@@ -8,6 +8,7 @@ export default function Header() {
 
   return (
     <header className="mainHeader">
+
       {/* ===== Top Section: Logo + Brand ===== */}
       <div className="topRow">
         {/* Logo */}
@@ -41,17 +42,26 @@ export default function Header() {
         </button>
 
         <div className="navLinks">
+
+          
           <Link href="/" scroll={true} onClick={() => setMenuOpen(false)}>
-            Home
+           <div className="icon">🏠</div> Home
           </Link>
+
+          
           <Link href="/services" scroll={true} onClick={() => setMenuOpen(false)}>
-            Services
+           <div className="icon">📑</div> Services
           </Link>
+
+          
           <Link href="/process" scroll={true} onClick={() => setMenuOpen(false)}>
-            Process
+           <div className="icon">⚙️</div> Process
           </Link>
+
+
+
           <Link href="/about" scroll={true} onClick={() => setMenuOpen(false)}>
-            About Us
+            <div className="icon">👥</div> About Us
           </Link>
         </div>
       </nav>
