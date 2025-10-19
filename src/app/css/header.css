@@ -13,7 +13,7 @@
     max-width: var(--max-width);
     margin: 0 auto;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
     flex-wrap: nowrap;
     position: relative;
@@ -29,11 +29,10 @@
 }
 
 .siteLogo {
-    width: 85px;
-    /* increased size for better proportion */
+    width: 110px;               /* increased for better visibility */
     height: auto;
     display: block;
-    margin-top: 2px;
+    margin-top: 4px;
     transition: transform 0.3s ease;
 }
 
