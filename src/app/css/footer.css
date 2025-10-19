@@ -1,4 +1,4 @@
-/* ===== Minimal Centered Footer (Final Style) ===== */
+/* ===== Footer CSS ===== */
 .siteFooter {
     background: var(--brand);
     color: var(--white);
@@ -27,6 +27,8 @@
 
 .footerContact a:hover {
     opacity: 0.85;
+    color: var(--accent);
+    opacity: 1;
 }
 
 .footerContact span {
@@ -56,4 +58,75 @@
     .footerContact {
         gap: 2px;
     }
+}
+
+/* === SOCIAL LINKS (Footer) === */
+.socialLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.followText {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-right: 4px;
+}
+
+.socialLinks a {
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.socialLinks a:hover {
+    transform: translateY(-2px);
+    opacity: 0.8;
+}
+
+.socialIcon {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    object-fit: contain;
+    display: inline-block;
+    transform: translateY(2px);             /* general balance for all */
+}
+
+.socialLinks a:nth-child(4) .socialIcon {
+    transform: translateY(0);               /* LinkedIn fix — moves it up */
+}
+
+/* Responsive tweak */
+@media (max-width: 600px) {
+    .socialLinks {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .socialIcon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.socialLinks .followLabel {
+    display: inline-block;
+    color: var(--white);
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    margin-right: 6px;
+    opacity: 0.9;
+}
+.footerContact>div {
+    margin-bottom: 4px;             /* consistent vertical rhythm */
 }

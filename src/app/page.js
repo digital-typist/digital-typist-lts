@@ -255,6 +255,7 @@ export default function HomePage() {
 
       {/* ===== FINAL CTA SECTION ===== */}
       <section className="finalCta">
+        <h2>Get In Touch Today</h2>
         <div className="ctaInner">
           <p className="ctaLine1">
             🎓{" "}
