@@ -60,7 +60,7 @@ export default function HomePage() {
           <div className="heroImageWrapper">
             <div className="heroImageBox">
               <Image
-                src="/card_front.jpg"
+                src="/business_front.jpg"
                 alt="Digital Typist promotional card"
                 width={420}
                 height={300}
