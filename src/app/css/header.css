@@ -1,91 +1,65 @@
-/* ===== HEADER BASE ===== */
+/* ===== HEADER STYLING ===== */
 .mainHeader {
     background: var(--headerBg);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    padding: 6px 20px 0;
+    padding: 14px 24px 10px;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-/* ===== TOP ROW ===== */
-.topRow {
+.headerContainer {
+    max-width: var(--max-width);
+    margin: 0 auto;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
-    position: relative;
     flex-wrap: wrap;
-    margin-bottom: 4px;
-}
-
-.logoBlock {
-    position: absolute;
-    left: 18px;
-    top: 4px;
-}
-
-.siteLogo {
-    width: 85px;
-    height: auto;
-    display: block;
 }
 
 .brandBlock {
-    text-align: center;
-    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
 }
 
 .brandName {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 1.85rem;
-    font-weight: 700;
+    font-size: 1.6rem;
+    font-weight: 800;
     color: var(--brand);
-    letter-spacing: 0.4px;
-    margin-bottom: 3px;
+    letter-spacing: 0.5px;
+    text-align: center;
 }
 
 .tagline {
-    font-family: "Inter", sans-serif;
     font-size: 0.9rem;
-    color: var(--text);
-    font-style: italic;
-    margin-top: 0;
+    color: var(--muted);
+    margin-top: 2px;
+    text-align: center;
 }
 
-/* ===== NAVIGATION ROW ===== */
-.navRow {
-    background: #fcf6ed;
-    /* soft contrast */
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+.logoBlock img {
+    width: 80px;
+    height: auto;
 }
 
+/* ===== NAVIGATION LINKS ===== */
 .navLinks {
     display: flex;
-    justify-content: space-between;
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 10px 40px;
-}
-
-.icon {
-    display: inline-flex;
+    gap: 28px;
     align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    margin-right: 6px;
-    vertical-align: middle;
 }
 
 .navLinks a {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
     color: var(--text);
     font-weight: 600;
     font-size: 1rem;
-    text-decoration: none;
     transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
 }
 
 .navLinks a:hover {
@@ -93,19 +67,25 @@
     transform: translateY(-1px);
 }
 
+.icon {
+    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* ===== HAMBURGER MENU ===== */
 .menuToggle {
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 22px;
-    height: 16px;
+    width: 26px;
+    height: 18px;
     background: transparent;
     border: none;
     cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 10px;
+    z-index: 1001;
+    transition: transform 0.3s ease;
 }
 
 .menuToggle .bar {
@@ -113,34 +93,101 @@
     height: 3px;
     background: var(--text);
     border-radius: 2px;
+    transition: all 0.3s ease;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== HAMBURGER TO CROSS ANIMATION ===== */
+.menuToggle.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(4px, 5px);
+}
+
+.menuToggle.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menuToggle.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -5px);
+}
+
+/* ===== RESPONSIVE MENU ===== */
 @media (max-width: 768px) {
-    .siteLogo {
-        width: 70px;
-    }
-
-    .brandName {
-        font-size: 1.5rem;
-    }
-
-    .tagline {
-        font-size: 0.8rem;
-    }
-
-    .navLinks {
-        flex-direction: column;
+    .headerContainer {
+        flex-wrap: nowrap;
+        justify-content: space-between;
         align-items: center;
-        gap: 8px;
-        padding: 10px 0;
-    }
-
-    .navLinks a {
-        color: var(--brand);
     }
 
     .menuToggle {
         display: flex;
+    }
+
+    .navLinks {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 85%;
+        background: var(--white);
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(10, 37, 64, 0.15);
+        padding: 20px 0;
+        text-align: center;
+        z-index: 1000;
+        transition: all 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .navLinks.open {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+        animation: fadeIn 0.25s ease;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translate(-50%, -10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translate(-50%, 0);
+        }
+    }
+
+    .navLinks a {
+        color: var(--brand);
+        font-weight: 700;
+        font-size: 1.05rem;
+        padding: 10px 0;
+        transition: background 0.3s ease;
+    }
+
+    .navLinks a:hover {
+        background: rgba(241, 205, 150, 0.15);
+    }
+
+    .icon {
+        font-size: 1.3rem;
+        margin-right: 8px;
+    }
+}
+
+/* ===== DESKTOP MENU ===== */
+@media (min-width: 769px) {
+    .navLinks {
+        display: flex;
+        position: static;
+        transform: none;
+        width: auto;
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+        opacity: 1;
+        visibility: visible;
     }
 }
