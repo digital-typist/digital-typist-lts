@@ -8,31 +8,23 @@ export default function Header() {
 
   return (
     <header className="mainHeader">
-
-      {/* ===== Top Section: Logo + Brand ===== */}
-      <div className="topRow">
-        {/* Logo */}
-        <div className="logoBlock" suppressHydrationWarning>
-          <Link href="/" prefetch={false}>
-            <img
-              src="/logo_transparent.png"
-              alt="Digital Typist Logo"
-              className="siteLogo"
-            />
+      <div className="headerContainer">
+        {/* ===== LEFT LOGO ===== */}
+        <div className="logoBlock">
+          <Link href="/" scroll={true}>
+            <img src="/logo_transparent.png" alt="Digital Typist Logo" className="siteLogo" />
           </Link>
         </div>
 
-        {/* Brand Name + Tagline */}
+        {/* ===== CENTER BRAND ===== */}
         <div className="brandBlock">
           <h1 className="brandName">DIGITAL TYPIST</h1>
           <p className="tagline">Your Academic Partner for Thesis & Research</p>
         </div>
-      </div>
 
-      {/* ===== Navigation Row ===== */}
-      <nav className={`navRow ${menuOpen ? "open" : ""}`}>
+        {/* ===== RIGHT MENU BUTTON ===== */}
         <button
-          className="menuToggle"
+          className={`menuToggle ${menuOpen ? "open" : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle navigation"
         >
@@ -40,30 +32,22 @@ export default function Header() {
           <span className="bar"></span>
           <span className="bar"></span>
         </button>
+      </div>
 
-        <div className="navLinks">
-
-          
-          <Link href="/" scroll={true} onClick={() => setMenuOpen(false)}>
-           <div className="icon">🏠</div> Home
-          </Link>
-
-          
-          <Link href="/services" scroll={true} onClick={() => setMenuOpen(false)}>
-           <div className="icon">📑</div> Services
-          </Link>
-
-          
-          <Link href="/process" scroll={true} onClick={() => setMenuOpen(false)}>
-           <div className="icon">⚙️</div> Process
-          </Link>
-
-
-
-          <Link href="/about" scroll={true} onClick={() => setMenuOpen(false)}>
-            <div className="icon">👥</div> About Us
-          </Link>
-        </div>
+      {/* ===== NAV LINKS (separate row, centered) ===== */}
+      <nav className={`navLinks ${menuOpen ? "open" : ""}`}>
+        <Link href="/" scroll={true} onClick={() => setMenuOpen(false)}>
+          <span className="icon">🏠</span> Home
+        </Link>
+        <Link href="/services" scroll={true} onClick={() => setMenuOpen(false)}>
+          <span className="icon">📄</span> Services
+        </Link>
+        <Link href="/process" scroll={true} onClick={() => setMenuOpen(false)}>
+          <span className="icon">⚙️</span> Process
+        </Link>
+        <Link href="/about" scroll={true} onClick={() => setMenuOpen(false)}>
+          <span className="icon">👥</span> About Us
+        </Link>
       </nav>
     </header>
   );
