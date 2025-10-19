@@ -2,7 +2,7 @@
 .mainHeader {
     background: var(--headerBg);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    padding: 10px 20px 0;
+    padding: 6px 20px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -13,49 +13,51 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: 10px;
     position: relative;
     flex-wrap: wrap;
+    margin-bottom: 4px;
 }
 
 .logoBlock {
     position: absolute;
-    left: 20px;
-    top: 6px;
+    left: 18px;
+    top: 4px;
 }
 
 .siteLogo {
-    width: 110px;
+    width: 85px;
     height: auto;
     display: block;
 }
 
 .brandBlock {
     text-align: center;
+    line-height: 1.2;
 }
 
 .brandName {
     font-family: "Cormorant Garamond", serif;
-    font-size: 2rem;
+    font-size: 1.85rem;
     font-weight: 700;
     color: var(--brand);
-    letter-spacing: 0.6px;
+    letter-spacing: 0.4px;
+    margin-bottom: 3px;
 }
 
 .tagline {
     font-family: "Inter", sans-serif;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--text);
     font-style: italic;
-    margin-top: 3px;
+    margin-top: 0;
 }
 
 /* ===== NAVIGATION ROW ===== */
 .navRow {
-    background: #fdf7ef;
-    /* subtle beige contrast */
+    background: #fcf6ed;
+    /* soft contrast */
     border-top: 1px solid rgba(0, 0, 0, 0.05);
-    margin-top: 10px;
 }
 
 .navLinks {
@@ -63,13 +65,13 @@
     justify-content: space-between;
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 12px 40px;
+    padding: 10px 40px;
 }
 
 .navLinks a {
     color: var(--text);
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.98rem;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -83,8 +85,8 @@
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 24px;
-    height: 18px;
+    width: 22px;
+    height: 16px;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -103,22 +105,22 @@
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .siteLogo {
-        width: 80px;
+        width: 70px;
     }
 
     .brandName {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
     .tagline {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     .navLinks {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
-        padding: 12px 0;
+        gap: 8px;
+        padding: 10px 0;
     }
 
     .navLinks a {
