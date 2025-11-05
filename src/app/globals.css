@@ -3,12 +3,9 @@
 
 :root {
   --brand: #133b68;
-  /* deep navy */
   --accent: #d4953a;
-  /* warm gold/orange */
   --bg: #f8f5f1;
   --headerBg: #fdf4e9;
-  /* soft cream */
   --text: #1e1e1e;
   --muted: #555;
   --white: #fff;
@@ -16,7 +13,21 @@
   --max-width: 1100px;
   --shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   font-size: 16px;
-}
+} 
+/* 
+:root {
+  --brand: #133b68;
+  --bg: #FAF7F2;
+  --accent: #e0e1dd;
+  --headerBg: #778da9;
+  --text: #1e1e1e;
+  --muted: #555;
+  --white: #fff;
+  --radius: 10px;
+  --max-width: 1100px;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+} */
 
 /* ===== GLOBAL RESET ===== */
 * {
